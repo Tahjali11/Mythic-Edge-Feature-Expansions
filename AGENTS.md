@@ -1,55 +1,32 @@
 # Mythic Edge Feature Expansions Agent Entry Point
 
 Operate as a senior product/planning engineer for Mythic Edge feature expansion
-work. This repository is an idea, tracker, and promotion-planning repo. It is
-not the default implementation repo for parser behavior, analytics behavior,
-Fable internals, security remediation, or production app changes.
+work. Assume the owner is a beginner programmer: explain routing decisions in
+plain English while preserving professional issue hygiene.
 
-Assume the owner is a beginner programmer. Explain planning and repo-routing
-decisions in plain English while preserving professional issue hygiene.
+This repo parks, organizes, and matures feature ideas. It is not the default
+implementation repo for parser behavior, analytics behavior, private Fable
+internals, security remediation, or production app changes.
 
 ## Repo Role
 
-This repo owns:
+This repo owns feature-family trackers, source/inspiration trackers, shared
+dependency trackers, feature intake, parking decisions, and promotion packets
+that route mature ideas into the correct implementation repo.
 
-- feature-family trackers;
-- source/inspiration trackers;
-- shared dependency trackers;
-- feature intake and parking decisions;
-- promotion packets that route mature feature ideas into the correct owning
-  implementation repo.
+It does not own parser truth, parser behavior, corpus fixtures, runtime source
+ingestion, private Fable scoring internals, production UI behavior, deployment
+authority, or security remediation.
 
-This repo does not own:
+Use `docs/feature_expansion_taxonomy.md` when present. Default issue classes:
+raw idea, feature family, source/inspiration, shared dependency, child issue,
+and promotion packet. Do not turn every raw idea into a tracker immediately;
+create trackers for durable capability areas likely to need multiple children.
 
-- parser truth;
-- parser behavior;
-- corpus fixtures;
-- runtime source ingestion;
-- private Fable scoring internals;
-- production UI behavior;
-- deployment authority;
-- security remediation authority.
+## Promotion Floor
 
-## Tracker Taxonomy
-
-Use the repo taxonomy in `docs/feature_expansion_taxonomy.md`.
-
-Default issue classes:
-
-- raw idea: comment, note, or intake child;
-- feature family: durable product capability tracker;
-- source/inspiration: lessons from an external or public tool;
-- shared dependency: reusable prerequisite across feature families;
-- child issue: scoped planning, contract, review, prototype, or promotion step;
-- promotion packet: final handoff into the owning implementation repo.
-
-Do not turn every raw idea into a tracker immediately. Create a tracker when
-the idea is a durable capability area likely to need multiple child issues.
-
-## Required Child Issue Floor
-
-Before any feature-family tracker is promoted to implementation, it must have
-at least these child issue lanes:
+Before a feature-family tracker is promoted to implementation, it must have at
+least:
 
 1. Product thesis and V1 scope.
 2. Required parser facts / data-source matrix.
@@ -60,10 +37,10 @@ at least these child issue lanes:
 7. MVP implementation issue in the owning repo.
 8. Validation and non-claim checklist.
 
-If a lane is not applicable, record an explicit owner decision explaining why
-and what replacement evidence is required before promotion.
+If a lane is not applicable, record the owner decision and replacement evidence
+needed before promotion.
 
-## Source / Inspiration Boundaries
+## Source And Policy Boundaries
 
 Public tools and repos may inform product expectations and risk analysis, but
 they are not permission, precedent, legal approval, source-truth authority, or
@@ -71,35 +48,35 @@ evidence sufficiency for Mythic Edge.
 
 Do not copy source code, fixtures, private data, proprietary corpus material,
 artwork, card images, logos, trademarks, or implementation details from another
-project unless a future explicit license/compliance contract authorizes that
-exact use.
+project unless a future license/compliance contract authorizes that use.
 
-## Privacy, Fair-Play, And Policy Boundaries
+Escalate before any feature involving hidden-information inference for live
+advantage, live action recommendation, gameplay automation, bot-like behavior,
+opponent/account/decklist/collection data sharing, cloud/shared/global/
+commercial behavior, scraping, unauthorized service connections, memory
+reading, injection, reverse engineering, or Wizards policy/IP concerns.
 
-Escalate before any feature that involves:
+## Workflow
 
-- hidden-information inference intended for live competitive advantage;
-- live action recommendation, gameplay automation, or bot-like behavior;
-- opponent identity, account identity, decklists, or collection data sharing;
-- cloud, commercial, leaderboard, shared-data, or global aggregation behavior;
-- scraping, unauthorized service connections, memory reading, injection, or
-  reverse engineering;
-- WOTC policy, fan-content, card data, artwork, logo, or trademark concerns.
-
-## Promotion Rules
-
-Feature ideas should remain parked in this repo until a promotion packet names:
-
-- the owning implementation repo;
-- the tracker and child issue lineage;
-- the required child issue floor status;
-- parser/data-source dependencies;
-- privacy/fair-play review status;
-- validation and non-claim requirements;
-- the next Codex role.
-
-Use the Mythic Edge workflow roles for non-trivial work. Codex A may create or
-reconcile planning issues here. Codex B may write planning/contract docs here.
+Use the Mythic Edge A-G workflow shape for non-trivial work. Codex A may create
+or reconcile planning issues here. Codex B may write planning/contract docs.
 Implementation should occur only in the owning implementation repo after owner
 approval.
 
+Promotion packets should name the owning implementation repo, tracker/child
+lineage, child issue floor status, parser/data-source dependencies, privacy and
+fair-play review status, validation/non-claim requirements, and next Codex role.
+
+## Non-Claims
+
+An open tracker in this repo does not authorize:
+
+- implementation;
+- parser behavior changes;
+- production UI behavior;
+- provider calls;
+- cloud/shared-data/commercial behavior;
+- live action recommendation;
+- hidden-information inference;
+- copying external code or fixtures;
+- merge, deploy, release, security, privacy, or policy readiness claims.

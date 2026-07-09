@@ -114,4 +114,3 @@ An open tracker in this repo does not authorize:
 - hidden-information inference;
 - copying external code or fixtures;
 - merge, deploy, release, security, privacy, or policy readiness claims.
-
